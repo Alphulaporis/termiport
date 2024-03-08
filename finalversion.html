@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Shukla - Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0f0f0f;
+            color: #00ff00;
+            font-family: 'Consolas', monospace;
+        }
+        #terminal-container {
+            border: 2px solid #00ff00;
+            padding: 10px;
+            width: 80%;
+            margin: 20px auto; /* Centering the terminal */
+        }
+        #terminal {
+            min-height: 60vh;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: auto;
+            background-color: #1e1e1e;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            border: 1px solid #00ff00;
+        }
+        .input-line {
+            color: #0077ff; /* Input color */
+        }
+        .output-line {
+            color: #00ff00; /* Output color */
+        }
+        .command {
+            color: #ff6600; /* Command color */
+        }
+        .description {
+            color: #ffcc00; /* Description color */
+        }
+        .graphic {
+            font-family: monospace;
+            white-space: pre;
+            text-align: left;
+            font-size: 1.2em; /* Increased font size */
+        }
+        .graphics {
+    font-family: monospace;
+    white-space: pre;
+    text-align: left;
+    font-size: 1.0 em; /* Decreased font size */
+    position: absolute; /* Position the ASCII art drawing absolutely within the terminal */
+    top: 20px; /* Adjust the distance from the top */
+    right: 200px; /* Adjust the distance from the right */
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="terminal-container">
+        <div id="terminal" tabindex="0">
+            <pre class="graphic">
+                 AAA    YY      YY   UU    UU    SSSSSS    HH     HH
+                AA AA    YY    YY    UU    UU   SS         HH     HH
+               AAAAAAA      YY       UU    UU    SSSSS     HHHHHHHHH
+               AA   AA      YY       UU    UU        SS    HH     HH
+               AA   AA      YY         UUUU     SSSSSS     HH     HH
+               
+               
+
+    Welcome to Termiport - Ayush's Portfolio
+    Type 'help' for a list of available commands.
+            </pre>
+            <pre class="graphics">
+                                              
+                ⠀⠀⠀⠀⠀⠀⢀⡠⠔⠒⠀⠉⠉⠉⠉⠉⠉⠐⠒⠢⠤⢀⡀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⢀⡤⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠒⠤⡀⠀⠀⠀
+                ⠀⠀⡠⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠓⢄⠀
+                ⠀⡸⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⡆
+                ⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹
+                ⠀⡇⠀⠀⠀⠀⠰⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸
+                ⠀⡇⠀⠀⢠⡀⠀⠙⢦⡀⠀⠈⢦⡀⠀⠀⠀⠀⡀⠀⠀⠀⢰⡀⠀⠀⠀⠀⠀⢸
+                ⠀⢃⠀⠀⡌⠙⠦⣀⠀⠙⢦⣀⠈⢎⠒⠤⢀⡀⠈⠳⣤⢀⡈⢏⠢⡀⠀⠀⠀⡆
+                ⠀⢸⡀⠀⡇⠀⠀⠀⠉⠑⠒⠓⠉⠒⠳⠄⠀⠈⠁⠐⠚⠷⠬⠉⠀⢸⠀⠀⢀⠃
+                ⠀⠈⡇⢀⠁⢀⣠⢔⣂⣈⣉⡱⠀⠀⠀⠀⠀⢼⣉⣉⣉⣐⡢⣄⠀⠘⡆⠀⢸⠀
+                ⢠⠢⣥⢸⠀⠈⠉⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠁⠀⡇⢀⠖⢦
+                ⢆⢖⣾⢾⠀⠀⢀⣠⣴⣶⣤⡀⢣⠀⠀⠀⠀⣠⣴⣶⣶⣤⡀⠀⠀⠀⣷⢣⡖⣼
+                ⢸⠸⡈⢾⡄⠀⠉⠁⠀⠈⠉⠙⢺⠀⠀⠀⠈⠉⠁⠀⠀⠀⠀⠀⠀⠀⢹⠃⡇⡿
+                ⠘⡆⠁⢘⡇⠀⠀⠀⠀⠀⠀⠀⡸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡄⠈⢀⠇
+                ⠀⠘⠦⠤⡇⠀⠀⠀⠀⠀⠀⢰⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡧⠤⠊⠀
+                ⠀⠀⠀⠀⢱⠀⠀⠀⠀⠀⠀⠀⠑⠢⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠀⠀⠀⠀
+                ⠀⠀⠀⠀⢸⡀⠀⠀⠀⢰⡖⠂⠀⠀⠀⠀⠀⠐⠒⣶⠀⠀⠀⠀⠀⡸⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⢇⠀⠀⠀⠈⢧⡀⠀⠀⠀⠀⠀⠀⣨⠏⠀⠀⠀⠀⢠⠇⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠈⢆⠀⠀⠀⠀⠈⠑⠒⠒⠒⠒⠉⠀⠀⠀⠀⠀⢀⠎⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠈⠣⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠃⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠈⠓⠄⣀⠀⠀⠀⠀⠀⠀⢀⡠⠔⠉⠀⠀⠀⠀⠀⠀⠀⠀
+                ⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣭⣶⣶⣶⣶⣮⣥⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤
+            </pre>
+            <br>
+            <div v-for="(line, index) in lines" :key="index" class="output-line" v-html="line"></div> <!-- Use v-html to render HTML -->
+            <br>
+            <p class="input-line"><span class="command">&gt;</span> <span id="command-line" contenteditable="true" @keydown.enter="executeCommand" @keydown.arrowup="previousCommand" @keydown.arrowdown="nextCommand" @keydown.tab.prevent="autocompleteCommand" @keydown.ctrl.i.prevent="clearTerminal" autofocus></span></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script>
+        new Vue({
+            el: '#terminal',
+            data: {
+                command: '',
+                lines: [],
+                commandHistory: [],
+                historyIndex: -1,
+                commands: [
+                    { name: 'about', description:  'About Ayush Shukla', action: 'aboutCommand' },
+                    { name: 'clear', description:  'Clear the terminal', action: 'clearCommand' },
+                    { name: 'echo', description:   'Print out anything', action: 'echoCommand' },
+                    { name: 'education', description: 'My education background', action: 'educationCommand' },
+                    { name: 'email', description: 'Send email to me', action: 'emailCommand' },
+                    { name: 'help', description: 'Check available commands', action: 'helpCommand' },
+                    { name: 'history', description: 'View command history', action: 'historyCommand' },
+                    { name: 'projects', description: 'View projects I\'ve coded', action: 'projectsCommand' },
+                    { name: 'socials', description: 'Check out my social accounts', action: 'socialsCommand' },
+                    { name: 'welcome', description: 'Display banner', action: 'welcomeCommand' },
+                    { name: 'whoami', description: 'About current user', action: 'whoamiCommand' }
+                ],
+                currentTheme: 'default' // Default theme
+            },
+            methods: {
+                writeToTerminal(output) {
+                    this.lines.push(output);
+                },
+                clearTerminal() {
+                    this.lines = [];
+                },
+                aboutCommand() {
+                    this.writeToTerminal('About Ayush Shukla: I am a talented individual with a passion for technology.');
+                },
+                clearCommand() {
+                    this.clearTerminal();
+                },
+                echoCommand() {
+                    this.writeToTerminal('Echo command logic');
+                },
+                educationCommand() {
+                    this.writeToTerminal('Education command logic');
+                },
+                emailCommand() {
+                    this.writeToTerminal('Email command logic');
+                },
+                helpCommand() {
+                    this.commands.forEach(cmd => {
+                        this.writeToTerminal(`<span class="command">${cmd.name}</span>: <span class="description">${cmd.description}</span>`);
+                    });
+                },
+                historyCommand() {
+                    this.writeToTerminal('History command logic');
+                },
+                projectsCommand() {
+                    this.writeToTerminal('Projects: I have worked on various projects related to web development, machine learning, and data analysis.');
+                },
+                socialsCommand() {
+                    this.writeToTerminal('Socials: You can find me on LinkedIn, Twitter, and GitHub.');
+                },                
+                welcomeCommand() {
+                    this.writeToTerminal('Welcome to Ayush Shukla\'s portfolio!');
+                },
+                whoamiCommand() {
+                    this.writeToTerminal('You are currently Ayush Shukla.');
+                },
+                executeCommand() {
+                    const command = document.getElementById('command-line').innerText.trim();
+                    if (command !== '') {
+                        this.writeToTerminal(`&gt; <span class="command">${command}</span>`);
+                        const foundCommand = this.commands.find(cmd => cmd.name === command);
+                        if (foundCommand) {
+                            this[foundCommand.action]();
+                        } else {
+                            this.writeToTerminal('Unrecognized command.');
+                        }
+                        document.getElementById('command-line').innerText = '';
+                    }
+                },
+                previousCommand() {
+                    if (this.historyIndex < this.commandHistory.length - 1) {
+                        this.historyIndex++;
+                        document.getElementById('command-line').innerText = this.commandHistory[this.historyIndex];
+                    }
+                },
+                nextCommand() {
+                    if (this.historyIndex > 0) {
+                        this.historyIndex--;
+                        document.getElementById('command-line').innerText = this.commandHistory[this.historyIndex];
+                    } else if (this.historyIndex === 0) {
+                        this.historyIndex = -1;
+                        document.getElementById('command-line').innerText = '';
+                    }
+                },
+                autocompleteCommand(event) {
+                    const input = document.getElementById('command-line');
+                    const value = input.innerText.toLowerCase();
+
+                    if (event.key === 'Tab') {
+                        for (let i = 0; i < this.commands.length; i++) {
+                            if (this.commands[i].name.startsWith(value)) {
+                                input.innerText = this.commands[i].name;
+                                break;
+                            }
+                        }
+                        event.preventDefault();
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
