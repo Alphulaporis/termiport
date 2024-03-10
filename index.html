@@ -58,30 +58,36 @@
 }
 /* Adjustments for responsiveness */
 @media only screen and (max-width: 768px) {
-            /* Modify styles for smaller screens */
-            #terminal-container {
-                width: 90%; /* Adjust width for smaller screens */
-            }
-            .graphic {
-                font-size: 1em; /* Reset font size for smaller screens */
-                position: relative; /* Adjust position for the ASCII art drawing */
-                top: initial; /* Reset top position */
-                right: initial; /* Reset right position */
-                text-align: center; /* Center align ASCII art on smaller screens */
-            }
-        }
-        @media only screen and (max-width: 480px) {
-            /* Further adjustments for even smaller screens */
-            #terminal-container {
-                width: 95%; /* Adjust width for very small screens */
-            }
-            #terminal {
-                padding: 10px; /* Reduce padding for smaller screens */
-            }
-            .graphic {
-                font-size: 0.8em; /* Further reduce font size for very small screens */
-            }
-        }
+    /* Modify styles for smaller screens */
+    #terminal-container {
+        width: 90%; /* Adjust width for smaller screens */
+        max-width: 100%; /* Ensure content doesn't overflow on small screens */
+    }
+    #terminal {
+        padding: 15px; /* Increase padding for better spacing on smaller screens */
+    }
+    .graphic {
+        font-size: 1em; /* Reset font size for smaller screens */
+        text-align: center; /* Center align ASCII art on smaller screens */
+    }
+    .input-line {
+        font-size: 0.8em; /* Decrease font size for input line on smaller screens */
+    }
+    .output-line {
+        font-size: 0.9em; /* Decrease font size for output lines on smaller screens */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Further adjustments for even smaller screens */
+    .input-line {
+        font-size: 0.7em; /* Further decrease font size for input line on very small screens */
+    }
+    .output-line {
+        font-size: 0.8em; /* Further decrease font size for output lines on very small screens */
+    }
+}
+
 </style>
 </head>
 <body>
