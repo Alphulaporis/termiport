@@ -186,14 +186,12 @@ Class X: 90.8% | Class XII: 77.8% 2018 - 2020');
 
                 helpCommand() {
                     this.commands.forEach(cmd => {
-                        this.writeToTerminal(`<span class="command">${cmd.name}</span>: <span class="description">${cmd.description}</span>`);
+                        this.writeToTerminal(<span class="command">${cmd.name}</span>: <span class="description">${cmd.description}</span>);
                     });
                 },
-                historyCommand(){
-                    const recentHistory = this.commandHistory.slice(-5).reverse();
-                    recentHistory.forEach((cmd, index) => {
-                        this.writeToTerminal(`${index + 1}: ${cmd}`);
-                    });
+                historyCommand() {
+                    this.writeToTerminal('History command logic');
+                },
                 projectsCommand() {
                     this.writeToTerminal('Projects: I have worked on various projects related to web development, machine learning, and data analysis.');
                 },
@@ -209,7 +207,7 @@ Class X: 90.8% | Class XII: 77.8% 2018 - 2020');
                 executeCommand() {
                     const command = document.getElementById('command-line').innerText.trim();
                     if (command !== '') {
-                        this.writeToTerminal(`&gt; <span class="command">${command}</span>`);
+                        this.writeToTerminal(&gt; <span class="command">${command}</span>);
                         const foundCommand = this.commands.find(cmd => cmd.name === command);
                         if (foundCommand) {
                             this[foundCommand.action]();
