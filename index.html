@@ -185,10 +185,11 @@ Class X: 90.8% | Class XII: 77.8% 2018 - 2020');
 }
 
                 helpCommand() {
-                    this.commands.forEach(cmd => {
-                        this.writeToTerminal(<span class="command">${cmd.name}</span>: <span class="description">${cmd.description}</span>);
-                    });
-                },
+    this.commands.forEach(cmd => {
+        this.writeToTerminal(`<span class="command">${cmd.name}</span>: <span class="description">${cmd.description}</span>`);
+    });
+}
+
                 historyCommand() {
                     this.writeToTerminal('History command logic');
                 },
