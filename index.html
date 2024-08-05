@@ -169,28 +169,31 @@
                     this.lines = [];
                 },
                 aboutCommand() {
-                    this.writeToTerminal('About Ayush Shukla: I am a talented individual with a passion for technology.');
+                    this.writeToTerminal('About Ayush Shukla: I am a Jr Cloud Engineer at Noventiq, a leading provider of cloud-based solutions for enterprises. I work with a team of experts to design, develop, and deploy secure and scalable cloud applications, using Azure, Docker, Jenkins, and other cutting-edge technologies. I am passionate about DevOps and strive to optimize processes, streamline workflows, and foster a culture of collaboration within organizations.');
                 },
                 clearCommand() {
                     this.clearTerminal();
                 },
-                echoCommand() {
-                    this.writeToTerminal('Echo command logic');
-                },
                 educationCommand() {
-                    this.writeToTerminal('Education command logic');
+                    this.writeToTerminal('Raj Kumar Goel Institute of Technology Ghaziabad
+Bachelor of Technology Computer Science and Engineering GPA: 8.00 2020 - 2024
+Kendriya Vidyalaya Raebareli
+Class X: 90.8% | Class XII: 77.8% 2018 - 2020');
                 },
-                emailCommand() {
-                    this.writeToTerminal('Email command logic');
-                },
+               emailCommand() {
+                    this.writeToTerminal('<a href="mailto:ayushpvas9291@gmail.com">Email Ayush</a>');
+}
+
                 helpCommand() {
                     this.commands.forEach(cmd => {
                         this.writeToTerminal(`<span class="command">${cmd.name}</span>: <span class="description">${cmd.description}</span>`);
                     });
                 },
-                historyCommand() {
-                    this.writeToTerminal('History command logic');
-                },
+                historyCommand(){
+                    const recentHistory = this.commandHistory.slice(-5).reverse();
+                    recentHistory.forEach((cmd, index) => {
+                        this.writeToTerminal(`${index + 1}: ${cmd}`);
+                    });
                 projectsCommand() {
                     this.writeToTerminal('Projects: I have worked on various projects related to web development, machine learning, and data analysis.');
                 },
